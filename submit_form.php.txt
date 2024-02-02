@@ -1,0 +1,26 @@
+<?php
+// 수신자 이메일 주소
+$to = "ktf31133@naver.com";
+
+// 이메일 제목
+$subject = "가입원서 제출 알림";
+
+// 이메일 본문
+$message = "가입원서가 제출되었습니다.\n\n";
+$message .= "이름: " . $_POST['name'] . "\n";
+$message .= "이메일: " . $_POST['email'] . "\n";
+$message .= "전화번호: " . $_POST['phone'] . "\n";
+$message .= "생년월일: " . $_POST['birthdate'] . "\n";
+$message .= "입사일: " . $_POST['hiredate'] . "\n";
+$message .= "노조가입일: " . $_POST['uniondate'] . "\n";
+
+// 보내는 사람 이메일 주소
+$headers = "From: webmaster@example.com\r\n";
+
+// 이메일 보내기
+if (mail($to, $subject, $message, $headers)) {
+    echo "이메일이 성공적으로 전송되었습니다.";
+} else {
+    echo "이메일 전송에 실패했습니다.";
+}
+?>
