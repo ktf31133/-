@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노동조합 가입원서</title>
+</head>
+<body>
+    <h2>노동조합 가입원서</h2>
+    <form action="submit_form.php" method="POST">
+        <label for="employee_id">사번:</label><br>
+        <input type="text" id="employee_id" name="employee_id" required><br>
+        
+        <label for="name">이름:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="phone">전화번호:</label><br>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="birth_date">생년월일:</label><br>
+        <input type="date" id="birth_date" name="birth_date" required><br>
+        
+        <label for="employment_date">입사일:</label><br>
+        <input type="date" id="employment_date" name="employment_date" required><br>
+
+        <label for="union_join_date">노조 가입일:</label><br>
+        <input type="date" id="union_join_date" name="union_join_date" required><br>
+
+        <input type="checkbox" id="agreement" name="agreement" required>
+        <label for="agreement">개인정보 수집 이용에 관한 사항에 동의합니다.</label><br>
+        
+        <input type="submit" value="가입하기">
+    </form>
+</body>
+</html>
